@@ -1,7 +1,7 @@
 package guru.springframework.converters;
 
 import guru.springframework.commands.NotesCommand;
-import guru.springframework.domain.Notes;
+import guru.springframework.domain.Note;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +24,7 @@ public class NotesToNotesCommandTest {
     @Test
     public void convert() throws Exception {
         //given
-        Notes notes = new Notes();
+        Note notes = new Note();
         notes.setId(ID_VALUE);
         notes.setRecipeNotes(RECIPE_NOTES);
 
@@ -43,6 +43,6 @@ public class NotesToNotesCommandTest {
 
     @Test
     public void testEmptyObject() throws Exception {
-        assertNotNull(converter.convert(new Notes()));
+        assertNotNull(converter.convert(new Note()));
     }
 }
